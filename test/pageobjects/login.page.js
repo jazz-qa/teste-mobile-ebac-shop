@@ -1,26 +1,30 @@
-import { $ } from '@wdio/globals'
+import { $ } from "@wdio/globals";
 
 class LoginPage {
-    get email() {
-        return $('id:email')
-    }
-    get password() {
-        return $('id:password')
-    }
-    get btnLogin() {
-        return $('~Login')
-    }
-    get btnSignUp() {
-        return $('id:signUp')
-    }
-    async signUp() {
-        await this.btnSignUp.click()
-    }
-    async login(email, password){
-        await this.email.setValue(email)
-        await this.password.setValue(password)
-        await this.btnLogin.click()
-    }
+
+  get inputEmail() {
+    return $("id:email");
+  }
+
+  get inputPassword() {
+    return $('-ios predicate string: name == "Password"');
+  }
+
+  get btnLogin() {
+    return $("~btnLogin");
+  }
+
+
+  async login(username, password) {
+    await this.inputEmail.setValue(username);
+    await this.inputPassword.setValue(password);
+    await this.btnLogin.click();
+  }
+
+
+  open() {
+    return super.open("login");
+  }
 }
 
 export default new LoginPage();
