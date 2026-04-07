@@ -31,7 +31,7 @@ export let sauceConf = {
                 build: 'appium-build-teste-ebacshop-ios',
                 name: 'Ebac Shop Teste',
                 deviceOrientation: 'PORTRAIT',
-                appiumVersion: '2.0.0'
+                appiumVersion: 'latest'
             },
         }
     ],
