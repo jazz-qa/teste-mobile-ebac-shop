@@ -6,8 +6,10 @@
   "main": "index.js",
   "scripts": {
     "test": "wdio run ./config/wdio.conf.js",
-    "test:checkout": "wdio run  ./config//wdio.conf.js --suite checkout",
-    "allure": "allure generate allure-results && allure open"
+    "test:login": "wdio run ./config/wdio.conf.js --suite login",
+    "test:product": "wdio run ./config/wdio.conf.js --suite product",
+    "posttest": "npm run report",
+    "report": "allure generate allure-results"
   },
   "keywords": [],
   "author": "",
