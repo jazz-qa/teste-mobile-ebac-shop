@@ -24,7 +24,7 @@ export let sauceConf = {
         {
             platformName: 'iOS',
             'appium:app': 'storage:filename=LojaEBAC.ipa', // The filename of the mobile app
-            'appium:deviceName': 'iPhone XR',
+            'appium:deviceName': 'iPhone 15 Simulator',
             // 'appium:platformVersion': '17',
             'appium:automationName': 'XCUITest',
             'sauce:options': {
